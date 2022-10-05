@@ -1,0 +1,47 @@
+//This class defines an intger stack that can hold 10 values
+public class Stack {
+	int stck[] =new int[12];
+	int tos;
+	//initialize top of a stack
+	Stack() {
+		tos =-1;}
+		//push an item onto the stack
+		void push(int item) {
+			if (tos==9)
+				System.out.println("STack is full");
+			else
+				stck[++tos]=item;
+			
+		}
+		//pop an item from the stack
+		int pop() {
+			if (tos<0) {
+				System.out.println("stack is underflow");
+				return 0;
+				
+			}
+			else 
+				return stck[tos--];
+		
+	}
+}
+
+public class TestStack {
+
+	public static void main(String[] args) {
+		Stack mystack1=new Stack();
+		Stack mystack2=new Stack();
+		//push numbers in to stack
+		for (int i=0;i<10;i++)mystack1.push(i);
+		for(int i=10;i<20;i++)mystack2.push(i);
+		
+		//pop those number in stack
+		System.out.println("Stack in mystack1:");
+		for(int i=0	;i<10;i++)
+			System.out.println(mystack1.pop());
+		System.out.println("Stack in mystack2:");
+		for (int i=0;i<10;i++)
+			System.out.println(mystack2.pop());
+	}
+}
+//about Stack class.as it is currently implemented ,it is possible for the array that holds the stck ,stck,to be alterd by code outside of Stack class this leaves Stack open to misuse
