@@ -1,0 +1,46 @@
+//This program use parameterized method 
+public class Box {
+	double width;
+	double height;
+	double depth;
+	
+	//compute and return volume 
+	
+	double  volume() {
+		return width*height*depth;
+	}
+	//sets dimensions of a box
+	
+	void setDim( double w, double h,double d) {
+		width =w;
+		height=h;
+		depth=d;
+		
+	}
+}
+
+public class BoxDemo5 {
+
+	public static void main(String[] args) {
+		Box mybox1=new Box();
+		Box mybox2=new Box();
+		double vol;
+		
+		mybox1.setDim(10, 20, 30);
+		mybox2.setDim(13,22,55);
+		
+		//get volume of the first box
+		vol=mybox1.volume();
+		System.out.println("volume is "+vol);
+		
+		//get volume of second box
+		
+		vol=mybox2.volume();
+		System.out.println("volume is "+vol);
+		
+		
+
+	}
+
+}
+//here we use setDim() method that is used to set the dimensions of each box
