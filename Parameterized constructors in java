@@ -1,0 +1,41 @@
+
+public class Box {
+	double width;
+	double height;
+	double depth;
+	
+	//compute and return volume 
+	
+	double  volume() {
+		return width*height*depth;
+	}
+	//sets dimensions of a box
+	
+     Box( double w, double h,double d) {
+		width =w;
+		height=h;
+		
+		depth=d;
+		
+	}
+}
+
+public class BoxDemo7 {
+
+	public static void main(String[] args) {
+		Box mybox1 =new Box(12,13,14);
+		Box mybox2=new Box(12,44,23);
+		
+		
+		double vol;
+		
+		//get volume of first box
+		
+		vol =mybox1.volume ();
+		System.out.println("volume is "+vol);
+		
+		//get volume of second box
+		System.out.println("volume is "+vol);
+	}
+}
+//Each object initialized as specified in the parameters to its constructors
